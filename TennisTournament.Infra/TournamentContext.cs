@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System.Reflection.Emit;
 using System.Reflection.Metadata;
-using System.Xml;
 using TennisTournament.Domain;
 using TennisTournament.Domain.Gender;
 
@@ -13,6 +12,7 @@ namespace TennisTournament.Infra
     {
         public DbSet<Tournament> Tournaments { get; set; }
         public DbSet<Player> Players { get; set; }
+
         public TournamentContext(DbContextOptions<TournamentContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

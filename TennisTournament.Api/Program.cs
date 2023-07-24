@@ -17,8 +17,8 @@ builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 builder.Services.AddTransient<ITournamentRepository, TournamentRepository>();
 
-//builder.Services.AddDbContext<SelfTourDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnection")));
-builder.Services.AddDbContext<TournamentContext>(options => options.UseInMemoryDatabase("TournamentDb"));
+builder.Services.AddDbContext<TournamentContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SQLConnection")));
+//builder.Services.AddDbContext<TournamentContext>(options => options.UseInMemoryDatabase("TournamentDb"));
 
 var app = builder.Build();
 
